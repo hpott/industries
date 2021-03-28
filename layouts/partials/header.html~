@@ -1,0 +1,17 @@
+<div id="header">
+  <h2>Hugo Industries</h2>
+  <p>Inventors of the walk-in Microwave & Blender</p>
+</div>
+<div id="navbar">
+  {{ range .Site.Menus.main }}
+  <a href="{{ .URL }}">
+    {{ if .Pre }}
+    {{ $icon :=
+    printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+    {{ $icon }}
+    {{ end }}
+    {{ $text := print .Name | safeHTML }}
+    {{ $text }}
+  </a>
+  {{ end }}
+</div>

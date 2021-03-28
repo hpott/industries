@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Hugo Industries</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+	{{ range .Site.Menus.main }}
+	<li class="nav-item">
+	  <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+	</li>
+	{{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>
